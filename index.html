@@ -1,7 +1,8 @@
 <html>
   <head>
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 <script src="https://unpkg.com/aframe-thumb-controls-component@1.1.0/dist/aframe-thumb-controls-component.min.js"></script>
+
 
   </head>
   <body>
@@ -115,9 +116,10 @@ src="./plutotexture.webp"
 ></a-sphere>
 
 <!-- Movemenet controls -->
-<a-entity oculus-touch-controls="hand: left" thumb-controls="hand: left" thumb-controls-debug="enabled: true; controllerType: oculus">
 
 
+<a-entity oculus-touch-controls="hand: left" vive-controls="hand: left" thumb-controls="hand: left"></a-entity>
+<a-entity oculus-touch-controls="hand: right" vive-controls="hand: right" thumb-controls="hand: right"></a-entity>
 
 
 </a-scene>
