@@ -14,19 +14,19 @@
       <a-sky src="#stars"></a-sky>
 
       <!-- nav-mesh: protecting us from running thru things  -->
-      <!-- <a-entity id="navmesh-Hello" gltf-model="AdvHelloWorldnavmesh.gltf" visible="false" nav-mesh=""></a-entity> -->
+      <a-entity id="navmesh-Hello" gltf-model="AdvHelloWorldnavmesh.gltf" visible="false" nav-mesh=""></a-entity>
       
       <a-entity id="npc" nav-agent="speed: 1"></a-entity>
 
       <!-- Basic movement and teleportation  -->
-      <a-entity id="cameraRig" navigator="cameraRig: #cameraRig; cameraHead: #head" position="25 1.7 30" rotation="0 0 0"></a-entity>
+      <a-entity id="cameraRig" movement-controls="constrainToNavMesh: false;" navigator="cameraRig: #cameraRig; cameraHead: #head" position="25 1.7 30" rotation="0 0 0"></a-entity>
       
-        <!-- camera -->
+      <!-- camera -->
       <a-entity id="head" camera="active: true" position="25 1.7 30" look-controls="pointerLockEnabled: true; reverseMouseDrag: true"></a-entity>
-      
+            
       <!-- Left Controller -->
       <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #FFF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true"></a-entity>
-      
+              
       <!-- Right Controller -->
       <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #FFF" visible="true"></a-entity>
       
