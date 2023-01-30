@@ -1,7 +1,7 @@
 <html>
   <head>
-    <!-- <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> -->
-    <script src="aframe-v1.1.0.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- <script src="aframe-v1.1.0.min.js"></script> -->
     <script src="aframe-extras.min.js"></script>
     <script src="aframe-teleport-controls.js"></script>
     <script src="aframe-thumb-controls-component.min.js"></script>
@@ -19,16 +19,16 @@
       <a-entity id="npc" nav-agent="speed: 1"></a-entity>
 
       <!-- Basic movement and teleportation  -->
-      <a-entity id="cameraRig" movement-controls="constrainToNavMesh: false" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="25 1.7 30" rotation="0 0 0"></a-entity>
+      <a-entity id="cameraRig" navigator="cameraRig: #cameraRig; cameraHead: #head" position="25 1.7 30" rotation="0 0 0"></a-entity>
       
         <!-- camera -->
       <a-entity id="head" camera="active: true" position="25 1.7 30" look-controls="pointerLockEnabled: true; reverseMouseDrag: true"></a-entity>
       
       <!-- Left Controller -->
-      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #FFF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60; type: line" visible="true"></a-entity>
+      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #FFF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true"></a-entity>
       
       <!-- Right Controller -->
-      <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #FFF" laser-controls raycaster="showLine: true; far: 10; interval: 0; objects: .clickable, a-link;" line="color: #f00; opacity: 0.5" visible="true"></a-entity>
+      <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #FFF" visible="true"></a-entity>
       
       <!-- <a-entity camera look-controls position="25 1.7 30"></a-entity> -->
       <a-sphere id="sun" color="#fa960a" position="-7 1.7 -5" scale="10 10 10" src="suntexture.jpg"></a-sphere>
