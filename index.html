@@ -13,38 +13,38 @@
       </a-assets>
       <a-sky src="#stars"></a-sky>
 
-
-      
       <!-- nav-mesh: protecting us from running thru things  -->
-      <a-entity id="navmesh-Hello" gltf-model="AdvHelloWorldnavmesh.gltf" visible="false" nav-mesh=""></a-entity>
+      <!-- <a-entity id="navmesh-Hello" gltf-model="AdvHelloWorldnavmesh.gltf" visible="false" nav-mesh=""></a-entity> -->
+      
+      <a-entity id="npc" nav-agent="speed: 1"></a-entity>
 
       <!-- Basic movement and teleportation  -->
-      <a-entity id="cameraRig" movement-controls="constrainToNavMesh: false" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="0 0 0" rotation="0 0 0"></a-entity>
+      <a-entity id="cameraRig" movement-controls="constrainToNavMesh: false" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="25 1.7 30" rotation="0 0 0"></a-entity>
       
         <!-- camera -->
       <a-entity id="head" camera="active: true" position="25 1.7 30" look-controls="pointerLockEnabled: true; reverseMouseDrag: true"></a-entity>
       
       <!-- Left Controller -->
-      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #FFF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true"></a-entity>
+      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #FFF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60; type: line" visible="true"></a-entity>
       
       <!-- Right Controller -->
       <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #FFF" laser-controls raycaster="showLine: true; far: 10; interval: 0; objects: .clickable, a-link;" line="color: #f00; opacity: 0.5" visible="true"></a-entity>
       
       <!-- <a-entity camera look-controls position="25 1.7 30"></a-entity> -->
-      <a-sphere id="sun" color="#fa960a" position="-7 1.7 -5" scale="10 10 10" src="./suntexture.jpg"></a-sphere>
-      <a-sphere id="mercury" color="#5d5e63" position="6 1.7 -5" scale="0.3 0.3 0.3" src="./mercurytexture.jpg"></a-sphere>
-      <a-sphere id="venus" color="#b3b3cc" position="10 1.7 -5" scale="0.5 0.5 0.5" src="./venustexture.jpg"></a-sphere>
-      <a-sphere id="earth" color="#FFF" position="14 1.7 -5" scale="0.58 0.58 0.58" src="./earthtexture.webp"></a-sphere>
-      <a-sphere id="moon" color="##878686" position="15 2.1 -5" scale="0.15 0.15 0.15" src="./moontexture.jpg"></a-sphere>
-      <a-sphere id="mars" color="##c45f06" position="18 1.7 -5" scale="0.5 0.5 0.5" src="./marstexture.webp"></a-sphere>
-      <a-sphere id="jupiter" color="#e3c5aa" position="24 1.7 -5" scale="2.5 2.5 2.5" src="./jupitertexture.jpg"></a-sphere>
-      <a-sphere id="saturn" color="#A1A1A1" position="40 1.7 -5" scale="2.3 2.3 2.3" src="./saturntexture.jpg"></a-sphere>
-      <a-torus id="saturn-ring-1" color="#57524A" segments-tubular="50" radius="3.2" radius-tubular="0.1" rotation="-50 0 0" scale="2.8 1.5 0.1" position="40 2 -5.5" src="./saturnring.webp"></a-torus>
-      <a-torus id="saturn-ring-2" color="#A29A87" segments-tubular="50" radius="2.4" radius-tubular="0.2" rotation="-50 0 0" scale="2.8 1.5 0.1" position="40 2 -5.5" src="./saturnring.webp"></a-torus>
-      <a-sphere id="uranus" color="#c2c2d6" position="55 1.7 -5" scale="1.5 1.5 1.5" src="./uranustexture.jpg"></a-sphere>
+      <a-sphere id="sun" color="#fa960a" position="-7 1.7 -5" scale="10 10 10" src="suntexture.jpg"></a-sphere>
+      <a-sphere id="mercury" color="#5d5e63" position="6 1.7 -5" scale="0.3 0.3 0.3" src="mercurytexture.jpg"></a-sphere>
+      <a-sphere id="venus" color="#b3b3cc" position="10 1.7 -5" scale="0.5 0.5 0.5" src="venustexture.jpg"></a-sphere>
+      <a-sphere id="earth" color="#FFF" position="14 1.7 -5" scale="0.58 0.58 0.58" src="earthtexture.webp"></a-sphere>
+      <a-sphere id="moon" color="##878686" position="15 2.1 -5" scale="0.15 0.15 0.15" src="moontexture.jpg"></a-sphere>
+      <a-sphere id="mars" color="##c45f06" position="18 1.7 -5" scale="0.5 0.5 0.5" src="marstexture.webp"></a-sphere>
+      <a-sphere id="jupiter" color="#e3c5aa" position="24 1.7 -5" scale="2.5 2.5 2.5" src="jupitertexture.jpg"></a-sphere>
+      <a-sphere id="saturn" color="#A1A1A1" position="40 1.7 -5" scale="2.3 2.3 2.3" src="saturntexture.jpg"></a-sphere>
+      <a-torus id="saturn-ring-1" color="#57524A" segments-tubular="50" radius="3.2" radius-tubular="0.1" rotation="-50 0 0" scale="2.8 1.5 0.1" position="40 2 -5.5" src="saturnring.webp"></a-torus>
+      <a-torus id="saturn-ring-2" color="#A29A87" segments-tubular="50" radius="2.4" radius-tubular="0.2" rotation="-50 0 0" scale="2.8 1.5 0.1" position="40 2 -5.5" src="saturnring.webp"></a-torus>
+      <a-sphere id="uranus" color="#c2c2d6" position="55 1.7 -5" scale="1.5 1.5 1.5" src="uranustexture.jpg"></a-sphere>
       <a-torus id="uranus-ring-1" color="#b3b3cc" segments-tubular="50" radius="2.4" radius-tubular="0.09" rotation="0 50 0" scale="1.5 1.5 0.06" position="55.6 1.7 -5.5" src="uranusring.gif"></a-torus>
-      <a-sphere id="neptune" color="#A1A1A1" position="63 1.7 -5" scale="1.5 1.5 1.5" src="./neptunetexture.jpg"></a-sphere>
-      <a-sphere id="pluto" color="" position="67 1.7 -5" scale="0.18 0.18 0.18" src="./plutotexture.webp"></a-sphere>
+      <a-sphere id="neptune" color="#A1A1A1" position="63 1.7 -5" scale="1.5 1.5 1.5" src="neptunetexture.jpg"></a-sphere>
+      <a-sphere id="pluto" color="" position="67 1.7 -5" scale="0.18 0.18 0.18" src="plutotexture.webp"></a-sphere>
       <!-- Movemenet controls -->
     </a-scene>
   </body>
