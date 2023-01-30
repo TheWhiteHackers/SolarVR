@@ -22,7 +22,7 @@
       <a-entity id="cameraRig" movement-controls="constrainToNavMesh: false;" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="0 0 0" rotation="0 0 0"></a-entity>
       
       <!-- camera -->
-      <a-entity id="head" camera="active: true" position="0 0 60" user-height="0" look-controls="pointerLockEnabled: true; reverseMouseDrag: true"></a-entity>
+      <a-entity id="head" camera="active: true" position="0 10 150" user-height="0" look-controls="pointerLockEnabled: true; reverseMouseDrag: true"></a-entity>
       
       <!-- Left Controller -->
       <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #FFF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true"></a-entity>
@@ -31,7 +31,7 @@
       <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #FFF" visible="true"></a-entity>
       
       <!-- <a-entity camera look-controls position="25 1.7 30"></a-entity> -->
-      <a-sphere id="sun" class="clickable" color="#fa960a" position="-50 1.7 -5" scale="10 10 10" src="suntexture.jpg"></a-sphere>
+      <a-sphere id="sun" class="clickable" color="#fa960a" position="-20 1.7 -5" scale="10 10 10" src="suntexture.jpg"></a-sphere>
       <a-sphere id="mercury" class="clickable" color="#5d5e63" position="6 1.7 -5" scale="0.3 0.3 0.3" src="mercurytexture.jpg"></a-sphere>
       <a-sphere id="venus" class="clickable" color="#b3b3cc" position="10 1.7 -5" scale="0.5 0.5 0.5" src="venustexture.jpg"></a-sphere>
       <a-sphere id="earth" class="clickable" color="#FFF" position="14 1.7 -5" scale="0.58 0.58 0.58" src="earthtexture.webp"></a-sphere>
